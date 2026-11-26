@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sutharsan — Entrepreneur, 3rd-year B.E. CSE (AI & ML) student, and Vibe Coder building modern frontend websites with AI tools.">
+  <title>Sutharsan — Entrepreneur &amp; AI Vibe Coder</title>
+
+  <!-- Google Fonts: Bricolage Grotesque (headings) & Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Thin blue scroll progress indicator -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Top Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-brand" id="navBrand">
+        <span class="nav-brand-text">Sutharsan</span><span class="brand-dot" aria-hidden="true">.</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#leadership" class="nav-link">Leadership</a>
+        <a href="#contact" class="nav-link nav-link-cta">Contact</a>
+      </nav>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="mobile-nav-links" aria-label="Mobile navigation">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#leadership" class="mobile-nav-link">Leadership</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 1. HERO -->
+    <section class="hero-section" id="hero" aria-label="Introduction">
+      <div class="container hero-container">
+        <div class="hero-meta-row">
+          <p class="hero-kicker" id="heroKicker">Entrepreneur · B.E. CSE (AI &amp; ML) · Vibe Coder</p>
+          <span class="hero-edition" aria-hidden="true">Portfolio / 2026</span>
+        </div>
+
+        <div class="hero-stage">
+          <div class="hero-name-wrap">
+            <h1 class="hero-name" id="heroName" aria-label="Sutharsan">Sutharsan</h1>
+          </div>
+
+          <figure class="hero-portrait-frame">
+            <img
+              src="assets/photo.jpg"
+              alt="Portrait of Sutharsan"
+              class="hero-portrait-img"
+              id="heroPhoto"
+            >
+            <div class="hero-portrait-fallback" id="heroPhotoFallback" hidden>
+              <span class="fallback-monogram" aria-hidden="true">S</span>
+              <span class="fallback-caption">Sutharsan</span>
+            </div>
+          </figure>
+        </div>
+
+        <div class="hero-bottom">
+          <div class="hero-tagline-block">
+            <span class="tagline-marker" aria-hidden="true"></span>
+            <p class="hero-tagline" id="heroTagline" aria-live="polite"></p>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="heroProjectsBtn">View Projects</a>
+            <a href="#contact" class="btn btn-secondary" id="heroContactBtn">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT -->
+    <section class="section about-section" id="about" aria-labelledby="aboutHeading">
+      <div class="container">
+        <div class="section-header section-reveal">
+          <div class="section-title-group">
+            <span class="section-index" aria-hidden="true">01</span>
+            <h2 class="section-title" id="aboutHeading">About</h2>
+          </div>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-grid">
+          <aside class="about-aside" aria-label="Profile highlights">
+            <div class="about-stat">
+              <span class="about-stat-label">Academic</span>
+              <span class="about-stat-value" id="aboutAcademic">3rd-Year B.E. CSE (AI &amp; ML)</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-label">Craft</span>
+              <span class="about-stat-value" id="aboutCraft">Vibe Coding &amp; Frontend</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-label">Venture</span>
+              <span class="about-stat-value" id="aboutVenture">Founder &amp; CEO, Velowings Technology</span>
+            </div>
+          </aside>
+
+          <div class="about-copy-wrap">
+            <p class="about-reveal-text" id="aboutText"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS -->
+    <section class="section skills-section" id="skills" aria-labelledby="skillsHeading">
+      <div class="container">
+        <div class="section-header section-reveal">
+          <div class="section-title-group">
+            <span class="section-index" aria-hidden="true">02</span>
+            <h2 class="section-title" id="skillsHeading">Skills</h2>
+          </div>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="highlights-grid" id="highlightsGrid" aria-label="Core focus highlights"></div>
+
+        <div class="skills-groups" id="skillsGroups" aria-label="Categorized skills"></div>
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS (Horizontal Scroll Track) -->
+    <section class="projects-section" id="projects" aria-labelledby="projectsHeading">
+      <div class="projects-track-wrapper" id="projectsTrackWrapper">
+        <div class="projects-sticky" id="projectsSticky">
+          <div class="container projects-sticky-inner">
+            <div class="section-header section-reveal">
+              <div class="section-title-group">
+                <span class="section-index" aria-hidden="true">03</span>
+                <h2 class="section-title" id="projectsHeading">Projects</h2>
+              </div>
+              <div class="section-line" aria-hidden="true"></div>
+            </div>
+
+            <div class="projects-viewport">
+              <div class="projects-rail" id="projectsRail">
+                <article class="project-card" id="projectCard">
+                  <div class="project-media" aria-label="TeamUp mobile application mockup">
+                    <div class="phone-mockup" aria-hidden="true">
+                      <div class="phone-screen">
+                        <div class="phone-notch"></div>
+
+                        <div class="phone-app-header">
+                          <span class="phone-app-title">TeamUp</span>
+                          <span class="phone-app-dot"></span>
+                        </div>
+
+                        <div class="phone-search-bar">
+                          <span class="phone-search-icon"></span>
+                          <span class="phone-search-text">Find teammates...</span>
+                        </div>
+
+                        <div class="phone-chip-group">
+                          <span class="phone-chip phone-chip-active">Hackathons</span>
+                          <span class="phone-chip">Projects</span>
+                          <span class="phone-chip">Academic</span>
+                        </div>
+
+                        <div class="phone-card-item">
+                          <div class="phone-card-top">
+                            <span class="phone-avatar"></span>
+                            <div class="phone-lines">
+                              <span class="phone-line phone-line-lg"></span>
+                              <span class="phone-line phone-line-sm"></span>
+                            </div>
+                          </div>
+                          <div class="phone-meta-pills">
+                            <span>Skills</span>
+                            <span>Interests</span>
+                          </div>
+                        </div>
+
+                        <div class="phone-card-item">
+                          <div class="phone-card-top">
+                            <span class="phone-avatar phone-avatar-alt"></span>
+                            <div class="phone-lines">
+                              <span class="phone-line phone-line-lg"></span>
+                              <span class="phone-line phone-line-sm"></span>
+                            </div>
+                          </div>
+                          <div class="phone-meta-pills">
+                            <span>Department</span>
+                            <span>Availability</span>
+                          </div>
+                        </div>
+
+                        <div class="phone-bottom-bar">
+                          <span class="phone-nav-dot phone-nav-dot-active"></span>
+                          <span class="phone-nav-dot"></span>
+                          <span class="phone-nav-dot"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-info">
+                    <div class="project-top-row">
+                      <span class="project-badge" id="projectBadge">Mobile Application</span>
+                    </div>
+
+                    <h3 class="project-title" id="projectTitle">TeamUp</h3>
+                    <p class="project-desc" id="projectDesc"></p>
+
+                    <div class="project-details">
+                      <div class="project-detail-item">
+                        <span class="project-detail-label">My role</span>
+                        <span class="project-detail-value" id="projectRole"></span>
+                      </div>
+                    </div>
+
+                    <ul class="project-tags" id="projectTags" aria-label="Technologies used"></ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="projects-track-footer" aria-hidden="true">
+              <span class="projects-scroll-hint">Scroll to glide</span>
+              <div class="projects-progress-rail">
+                <div class="projects-progress-fill" id="projectsProgressFill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. LEADERSHIP & ENTREPRENEURSHIP -->
+    <section class="section leadership-section" id="leadership" aria-labelledby="leadershipHeading">
+      <div class="container">
+        <div class="section-header section-reveal">
+          <div class="section-title-group">
+            <span class="section-index" aria-hidden="true">04</span>
+            <span class="leadership-eyebrow" id="leadershipEyebrow">Leadership &amp; Entrepreneurship</span>
+          </div>
+          <h2 class="section-title leadership-heading" id="leadershipHeading">Founder &amp; CEO, VELOWINGS TECHNOLOGY</h2>
+          <p class="leadership-subheading" id="leadershipSubheading">A student-focused learning and professional development initiative.</p>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="leadership-layout">
+          <div class="leadership-sticky-col">
+            <div class="leadership-brand-card">
+              <div class="leadership-logo-wrap" id="leadershipLogoWrap">
+                <img
+                  src="/public/images/velowings-logo.png"
+                  alt="VELOWINGS TECHNOLOGY logo"
+                  class="leadership-logo-img"
+                  id="leadershipLogo"
+                >
+              </div>
+
+              <div class="leadership-links" id="leadershipLinks"></div>
+            </div>
+          </div>
+
+          <div class="leadership-cards-col" id="leadershipCards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT -->
+    <section class="section contact-section" id="contact" aria-labelledby="contactHeading">
+      <div class="container">
+        <div class="section-header section-reveal">
+          <div class="section-title-group">
+            <span class="section-index" aria-hidden="true">05</span>
+            <h2 class="section-title" id="contactHeading">Contact</h2>
+          </div>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 class="contact-headline">Let&rsquo;s build something bold together.</h3>
+            <p class="contact-subcopy">
+              Have a project idea, collaboration, or student program in mind? Send a message directly to WhatsApp or reach out via email and LinkedIn.
+            </p>
+
+            <div class="contact-channels">
+              <div class="contact-channel">
+                <span class="contact-channel-label">Email</span>
+                <a href="mailto:sutharsan182007@gmail.com" class="contact-channel-link" id="contactEmailLink">
+                  sutharsan182007@gmail.com
+                </a>
+              </div>
+
+              <div class="contact-channel">
+                <span class="contact-channel-label">LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/sutharsan-s-785b95388"
+                  class="contact-channel-link"
+                  id="contactLinkedinLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  linkedin.com/in/sutharsan-s-785b95388
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-field">
+                <label for="contactName" class="form-label">Name</label>
+                <input
+                  type="text"
+                  id="contactName"
+                  name="name"
+                  class="form-input"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label for="contactEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  name="email"
+                  class="form-input"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  class="form-input form-textarea"
+                  rows="5"
+                  placeholder="Tell me about your idea, project, or inquiry..."
+                  required
+                ></textarea>
+              </div>
+
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="contactSubmitBtn">
+                Send message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy" id="footerCopy">&copy; 2026 Sutharsan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/919003749115?text=Hi%20Sutharsan%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect"
+    class="whatsapp-float"
+    id="whatsappFloat"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+  >
+    <span class="whatsapp-tooltip" aria-hidden="true">Chat on WhatsApp</span>
+    <span class="whatsapp-ring" aria-hidden="true"></span>
+    <span class="whatsapp-btn-circle" aria-hidden="true">
+      <svg class="whatsapp-icon" viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true">
+        <path d="M16.004 2.667C8.64 2.667 2.667 8.64 2.667 16.004c0 2.353.615 4.651 1.784 6.678L2.667 29.333l6.817-1.788a13.28 13.28 0 0 0 6.52 1.701h.005c7.362 0 13.324-5.973 13.324-13.337 0-3.562-1.387-6.91-3.905-9.429A13.254 13.254 0 0 0 16.004 2.667Zm7.783 18.923c-.331.93-1.923 1.778-2.66 1.884-.684.1-1.55.141-2.501-.16-.576-.183-1.316-.428-2.262-.837-3.98-1.718-6.578-5.736-6.776-6-.198-.265-1.617-2.152-1.617-4.106 0-1.954 1.023-2.914 1.387-3.311.364-.397.794-.496 1.059-.496.265 0 .53.003.761.014.244.012.571-.093.893.681.331.795 1.125 2.747 1.224 2.946.1.198.165.43.033.694-.132.265-.198.43-.397.662-.198.232-.418.518-.596.695-.198.198-.405.413-.174.811.232.397 1.029 1.698 2.21 2.75 1.519 1.353 2.799 1.772 3.196 1.971.397.198.629.165.861-.1.231-.265.993-1.158 1.258-1.555.265-.397.53-.331.894-.199.364.133 2.316 1.092 2.713 1.291.397.198.662.298.761.463.1.166.1.96-.232 1.89Z"/>
+      </svg>
+    </span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
